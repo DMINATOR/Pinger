@@ -4,14 +4,15 @@ using System;
 public partial class SingleShotGun : BaseGun
 {
     // Location where projectile should spawn
-    private Marker2D _spawnLocation;
+    [Export]
+    public Marker2D projectileSpawnLocation;
 
     // True if shooting
     private bool _shooting;
 
     public override void _Ready()
     {
-        _spawnLocation = GetNode<Marker2D>($"%{nameof(_spawnLocation)}");
+        //_spawnLocation = GetNode<Marker2D>($"%{nameof(_spawnLocation)}");
         _shooting = false;
     }
 

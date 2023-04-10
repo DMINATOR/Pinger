@@ -20,12 +20,16 @@ public partial class PlayerGuns : Node2D
     // Shot from current equipped gun
     public BaseGun Shoot()
     {
+        GD.Print("shoot");
+
         return _equippedGun.ShootProjectile();
     }
 
     // Stop shooting a gun
     public void Release()
     {
+        GD.Print("release");
+
         _equippedGun.Release();
     }
 
