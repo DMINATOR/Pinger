@@ -3,13 +3,9 @@ using System;
 
 public partial class BaseGun : Node2D
 {
-	// Called when the node enters the scene tree for the first time.
-	public override void _Ready()
-	{
-	}
+    [Export]
+    public PackedScene ProjectileScene;
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
-	{
-	}
+    [Export]
+    public float ProjectileSpeed = 100; // How fast the projectile will move (pixels/sec).
 }

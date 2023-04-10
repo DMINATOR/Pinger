@@ -1,3 +1,6 @@
-[gd_scene format=3 uid="uid://u2feqox3qsye"]
+[gd_scene load_steps=2 format=3 uid="uid://u2feqox3qsye"]
+
+[ext_resource type="Script" path="res://scenes/weapons/BaseGun.cs" id="1_rqs2j"]
 
 [node name="BaseGun" type="Node2D"]
+script = ExtResource("1_rqs2j")
