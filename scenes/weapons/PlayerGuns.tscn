@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://5j01x8tdnc5r"]
+
+[ext_resource type="Script" path="res://scenes/weapons/PlayerGuns.cs" id="1_xr703"]
+[ext_resource type="PackedScene" uid="uid://cyek8q877nlna" path="res://scenes/weapons/SingleShotGun.tscn" id="2_yikh4"]
+
+[node name="PlayerGuns" type="Node2D"]
+editor_description = "Guns that player has acquired and that can be shot with"
+script = ExtResource("1_xr703")
+
+[node name="_availableGuns" type="Node" parent="."]
+unique_name_in_owner = true
+
+[node name="SingleShotGun" parent="_availableGuns" instance=ExtResource("2_yikh4")]

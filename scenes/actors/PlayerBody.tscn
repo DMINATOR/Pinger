@@ -1,13 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://beeryo7l7k1xi"]
+[gd_scene load_steps=5 format=3 uid="uid://beeryo7l7k1xi"]
 
 [ext_resource type="Script" path="res://scenes/actors/PlayerBody.cs" id="1_adsx8"]
 [ext_resource type="Texture2D" uid="uid://b2ak1cmrxn7t5" path="res://icon.svg" id="2_6jyq5"]
+[ext_resource type="PackedScene" uid="uid://5j01x8tdnc5r" path="res://scenes/weapons/PlayerGuns.tscn" id="3_22wu8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_75r0j"]
 size = Vector2(123, 133)
 
-[node name="PlayerBody" type="CharacterBody2D"]
+[node name="PlayerBody" type="CharacterBody2D" node_paths=PackedStringArray("_playerGuns")]
 script = ExtResource("1_adsx8")
+_playerGuns = NodePath("PlayerGuns")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_6jyq5")
@@ -15,3 +17,5 @@ texture = ExtResource("2_6jyq5")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_75r0j")
+
+[node name="PlayerGuns" parent="." instance=ExtResource("3_22wu8")]
