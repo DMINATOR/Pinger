@@ -29,6 +29,16 @@ public partial class PlayerBody : CharacterBody2D
         {
             StopShootingWeapon();
         }
+
+        // Weapons
+        if (Input.IsActionPressed(InputMapKeys.NextWeapon))
+        {
+            _playerGuns.EquipNextGun();
+        }
+        if (Input.IsActionPressed(InputMapKeys.PreviousWeapon))
+        {
+            _playerGuns.EquipPreviousGun();
+        }
     }
 
     public override void _PhysicsProcess(double delta)

@@ -3,15 +3,16 @@ using System;
 
 public partial class PlayerGuns : Node2D
 {
-    private BaseGun _equippedGun = null;
+    [Export]
+    public Node AvailableGunsCollection;
 
-    private Node _availableGuns;
+    private BaseGun _equippedGun = null;
 
     public override void _Ready()
     {
         GD.Print("ready");
 
-        _availableGuns = GetNode<Node>($"%{nameof(_availableGuns)}");
+        //_availableGuns = GetNode<Node>($"%{nameof(_availableGuns)}");
 
         EquipNextGun();
     }
@@ -60,14 +61,14 @@ public partial class PlayerGuns : Node2D
             nextIndex = CalculateGunIndex(_equippedGun.GetIndex() + direction);
         }
 
-        _equippedGun = (BaseGun)_availableGuns.GetChild(nextIndex); // Assign first as equipped
+        _equippedGun = (BaseGun)AvailableGunsCollection.GetChild(nextIndex); // Assign first as equipped
 
         return _equippedGun;
     }
 
     private int CalculateGunIndex(int currentIndex)
     {
-        var maxIndex = _availableGuns.GetChildCount();
+        var maxIndex = AvailableGunsCollection.GetChildCount();
 
         if (currentIndex < 0)
         {
