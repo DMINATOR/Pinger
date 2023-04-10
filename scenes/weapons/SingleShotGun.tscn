@@ -11,6 +11,7 @@ projectileSpawnLocation = NodePath("projectileSpawnLocation")
 ProjectileScene = ExtResource("2_1pfm0")
 
 [node name="GunShroud" type="Sprite2D" parent="."]
+modulate = Color(0.0431373, 0, 1, 1)
 position = Vector2(1, 2)
 scale = Vector2(0.546875, 1.01563)
 texture = ExtResource("2_6p40a")

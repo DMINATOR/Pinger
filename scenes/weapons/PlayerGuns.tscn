@@ -8,6 +8,6 @@ editor_description = "Guns that player has acquired and that can be shot with"
 script = ExtResource("1_xr703")
 AvailableGunsCollection = NodePath("AvailableGuns")
 
-[node name="AvailableGuns" type="Node" parent="."]
+[node name="AvailableGuns" type="Node2D" parent="."]
 
 [node name="SingleShotGun" parent="AvailableGuns" instance=ExtResource("2_yikh4")]

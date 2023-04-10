@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cfky11l68el2o"]
+[gd_scene load_steps=4 format=3 uid="uid://cfky11l68el2o"]
 
 [ext_resource type="Script" path="res://scenes/projectiles/BulletProjectile.cs" id="1_8vpnj"]
+[ext_resource type="Texture2D" uid="uid://b2ak1cmrxn7t5" path="res://icon.svg" id="2_mop70"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ejfmd"]
 
@@ -9,3 +10,8 @@ script = ExtResource("1_8vpnj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_ejfmd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.572549, 1, 0.027451, 1)
+scale = Vector2(0.308, 0.308)
+texture = ExtResource("2_mop70")

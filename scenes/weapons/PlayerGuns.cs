@@ -4,7 +4,7 @@ using System;
 public partial class PlayerGuns : Node2D
 {
     [Export]
-    public Node AvailableGunsCollection;
+    public Node2D AvailableGunsCollection;
 
     private BaseGun _equippedGun = null;
 
