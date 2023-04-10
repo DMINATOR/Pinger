@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cyek8q877nlna"]
+
+[ext_resource type="Script" path="res://scenes/weapons/SingleShotGun.cs" id="1_hwad0"]
+[ext_resource type="Texture2D" uid="uid://b2ak1cmrxn7t5" path="res://icon.svg" id="2_6p40a"]
+
+[node name="SingleShotGun" type="Node2D"]
+editor_description = "Gun that shoots a single projectile once."
+script = ExtResource("1_hwad0")
+
+[node name="GunShroud" type="Sprite2D" parent="."]
+position = Vector2(1, 2)
+scale = Vector2(0.546875, 1.01563)
+texture = ExtResource("2_6p40a")
+
+[node name="_spawnLocation" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -70)
