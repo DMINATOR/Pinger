@@ -21,7 +21,8 @@ public partial class SingleShotGun : BaseGun
         {
             _shooting = true;
 
-            var instance = ProjectileScene.Instantiate();
+            var instance = ProjectileScene.Instantiate<BaseProjectile>();
+            instance.CollisionMask = CollisionLayerMask;
             AddChild(instance);
 
             // Projectile was shot
