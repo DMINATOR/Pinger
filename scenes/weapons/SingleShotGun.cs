@@ -12,7 +12,6 @@ public partial class SingleShotGun : BaseGun
 
     public override void _Ready()
     {
-        //_spawnLocation = GetNode<Marker2D>($"%{nameof(_spawnLocation)}");
         _shooting = false;
     }
 
@@ -24,9 +23,6 @@ public partial class SingleShotGun : BaseGun
 
             var instance = ProjectileScene.Instantiate();
             AddChild(instance);
-
-            //var newProjectile = ProjectileScene.Instance<BulletProjectile>();
-            //GlobalGameState.GameplayData.GameMap.SpawnProjectile(newProjectile, _spawnLocation, this.GlobalRotation, ProjectileSpeed);
 
             // Projectile was shot
             return this;

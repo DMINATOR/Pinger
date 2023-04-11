@@ -2,16 +2,16 @@ using Godot;
 
 public partial class PlayerGuns : Node2D
 {
+    // Reference to the node that contains all the available guns that player can choose from
     [Export]
     public Node2D AvailableGunsCollection;
 
+    // Currently equipped gun
     private BaseGun _equippedGun = null;
 
     public override void _Ready()
     {
         GD.Print("ready");
-
-        //_availableGuns = GetNode<Node>($"%{nameof(_availableGuns)}");
 
         EquipNextGun();
     }

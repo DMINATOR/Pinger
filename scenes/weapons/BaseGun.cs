@@ -1,5 +1,4 @@
 using Godot;
-using System;
 
 /// <summary>
 /// Base class to use for guns shooting projectiles
@@ -13,6 +12,10 @@ public partial class BaseGun : Node2D
     // How fast the projectile will move (pixels/sec).
     [Export]
     public float ProjectileSpeed = 100;
+
+    // Collision Layer mask to be used for projectiles created by this gun
+    [Export(hint: PropertyHint.Layers2DPhysics)]
+    public uint CollisionLayerMask;
 
     // Shoots projectile
     public virtual BaseGun ShootProjectile()
