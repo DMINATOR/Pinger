@@ -7,6 +7,10 @@ public partial class SingleShotGun : BaseGun
     [Export]
     public Marker2D projectileSpawnLocation;
 
+    // Direction where the projectile should be directed at
+    [Export]
+    public Marker2D projectileDirection;
+
     // True if shooting
     private bool _shooting;
 
@@ -22,6 +26,13 @@ public partial class SingleShotGun : BaseGun
             _shooting = true;
 
             var instance = ProjectileScene.Instantiate<BaseProjectile>();
+
+            // Apply global transform location
+            instance.Transform = projectileSpawnLocation.Transform;
+
+            // Apply rotation to projectile
+            instance.LinearVelocity = new Vector2(0, - ProjectileSpeed).Rotated(this.GlobalRotation);
+
             instance.CollisionMask = CollisionLayerMask;
             AddChild(instance);
 
