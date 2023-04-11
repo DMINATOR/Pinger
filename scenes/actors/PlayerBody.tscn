@@ -8,6 +8,8 @@
 size = Vector2(123, 133)
 
 [node name="PlayerBody" type="CharacterBody2D" node_paths=PackedStringArray("_playerGuns")]
+collision_mask = 2
+platform_on_leave = 2
 script = ExtResource("1_adsx8")
 _playerGuns = NodePath("PlayerGuns")
 

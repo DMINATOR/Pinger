@@ -7,6 +7,10 @@
 radius = 24.0832
 
 [node name="BulletProjectile" type="RigidBody2D"]
+collision_layer = 4
+collision_mask = 3
+gravity_scale = 0.0
+can_sleep = false
 script = ExtResource("1_8vpnj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
