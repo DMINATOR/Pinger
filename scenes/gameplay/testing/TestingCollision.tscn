@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bghcx5c2jdti1"]
+
+[ext_resource type="PackedScene" uid="uid://beeryo7l7k1xi" path="res://scenes/actors/PlayerBody.tscn" id="1_ol6us"]
+[ext_resource type="PackedScene" uid="uid://c6ya7fw7vum5b" path="res://scenes/actors/Enemy.tscn" id="2_otxn2"]
+
+[node name="TestingCollision" type="Node2D"]
+
+[node name="PlayerBody" parent="." instance=ExtResource("1_ol6us")]
+position = Vector2(197, 196)
+
+[node name="Enemy" parent="." instance=ExtResource("2_otxn2")]
+position = Vector2(816, 210)
